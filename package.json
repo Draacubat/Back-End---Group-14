@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Draacubat/Back-End---Group-14#readme",
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.11"
   },
   "dependencies": {
     "connect-flash": "^0.1.1",
