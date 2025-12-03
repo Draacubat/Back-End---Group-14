@@ -1,0 +1,63 @@
+/* Body, basic page settings*/
+body {
+  font-family: Arial, sans-serif;
+  background: #cacaca;
+  margin: 0;
+}
+
+/* Html & body height*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flexbox layout for body */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Takes up all of the empty space on the site so footer stays at the bottom*/
+.container {
+  flex: 1; 
+}
+
+
+/*Navigation bar, styling*/
+nav {
+  background: #263238;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 1, 1.1);
+  
+}
+
+/*Navigation bar links*/
+nav ul {
+  list-style: none;
+  display: flex; /* List links in a row*/
+  gap: 1rem;
+  
+}
+
+/*Navigation bar link styling*/
+nav a {
+  color: white;
+  text-decoration: none;  
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container padding */
+.container {
+  padding: 1.5rem; /* Inner spacing for main content area */
+}
+
+/* Footer Styling */
+footer {
+  background: #263238;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
