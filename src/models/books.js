@@ -10,14 +10,23 @@ const booksSchema = new Schema(
             first: {
                 type: String,
                 trim: true,
+                require: true
             },
             last: {
                 type: String,
-                trim: true
+                trim: true,
+                require: true
             },
         },
         title: {
-            type: String
+            type: String,
+            require: true
+        },
+        genre: {
+            type: String,
+            min: [0, "You have entered the void as the genre"],
+            max: 500,
+            require: true
         }
     }
 );

@@ -27,6 +27,7 @@ const usersSchema = new Schema(
             type: String,
             required: true
         },
+        // add borrowed books here
     }
 );
 
