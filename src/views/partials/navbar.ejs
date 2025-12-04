@@ -1,0 +1,19 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/books">Books</a></li>
+
+    <% if (!user) { %>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    <% } %>
+
+    <% if (user && user.role === "admin") { %>
+      <li><a href="/admin">Admin Panel</a></li>
+    <% } %>
+
+    <% if (user) { %>
+      <li><a href="/logout">Logout</a> (<%= user.username %>)</li>
+    <% } %>
+  </ul>
+</nav>
