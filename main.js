@@ -32,6 +32,21 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+// Render books.ejs template
+app.get("/books", (req, res) => {
+  res.render("books/books");
+});
+
+// login
+app.get("/login", (req, res) => {
+  res.render("login/login");
+});
+
+// register
+app.get("/register", (req, res) => {
+  res.render("register/register");
+});
+
 // Run server
 app.listen(app.get("port"), () => {
   console.log(`Server running at http://localhost:${app.get("port")}`);

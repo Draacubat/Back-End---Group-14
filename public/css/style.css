@@ -22,6 +22,117 @@ body {
   flex: 1; 
 }
 
+/*------BOOKS PAGE------*/
+
+
+
+/*------LOGIN PAGE------*/
+
+.login-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.login-text {
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto 1rem auto;
+}
+
+.login-form {
+  max-width: 250px;
+  height: 150px;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: rgb(254, 254, 254);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.50);
+}
+
+/* Input fields */
+.login-form input {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Button */
+.login-form button {
+  width: 50%;
+  padding: 0.4rem;
+  background: #263238;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: center;
+}
+.login-form button:hover {
+  background: #455a64;
+}
+
+
+/*------REGISTER PAGE------*/
+
+.register-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.register-text {
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto 1rem auto;
+}
+
+.register-form {
+  max-width: 250px;
+  height: 220px;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: rgb(254, 254, 254);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.50);
+  
+}
+
+/* Input fields */
+.register-form input {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Button */
+.register-form button {
+  width: 50%;
+  padding: 0.4rem;
+  background: #263238;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: center;
+}
+.register-form button:hover {
+  background: #455a64;
+}
+
+
+
+/*------NAVIGATION BAR------*/
 
 /*Navigation bar, styling*/
 nav {
@@ -33,19 +144,23 @@ nav {
 
 /*Navigation bar links*/
 nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   list-style: none;
-  display: flex; /* List links in a row*/
-  gap: 1rem;
+  gap: 2rem;
   
 }
 
 /*Navigation bar link styling*/
 nav a {
   color: white;
-  text-decoration: none;  
+  text-decoration: none; 
+  font-size: 18px; 
 }
 nav a:hover {
   text-decoration: underline;
+  box-shadow: 0 2px 4px rgba(0, 0, 1, 1.1);
 }
 
 /* Container padding */
@@ -53,7 +168,7 @@ nav a:hover {
   padding: 1.5rem; /* Inner spacing for main content area */
 }
 
-/* Footer Styling */
+/*-------FOOTER-------*/
 footer {
   background: #263238;
   color: white;
