@@ -37,4 +37,4 @@ const booksSchema = new Schema(
     }
 );
 
-export const Books = mongoose.model("Books", userSchema);
+export const Books = mongoose.model("Books", booksSchema);
