@@ -18,6 +18,10 @@
                         <%= book.title%>
                     </a>
                 </td>
+                <td><%= book.author %></td>
+                <td><%= book.genre %></td>
+                <td><%= book.available ? "Yes" : "No" %></td>
+                <td><%= book.location %></td>
             </tr>
         <%}); %>
     </tbody>
