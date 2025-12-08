@@ -27,6 +27,12 @@ const booksSchema = new Schema(
             min: [0, "You have entered the void as the genre"],
             max: 500,
             require: true
+        },
+        location: {
+            type: String
+        },
+        available: {
+            type: Boolean,
         }
     }
 );
