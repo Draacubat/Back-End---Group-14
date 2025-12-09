@@ -1,0 +1,28 @@
+<!--This code shows when the user has searched the available books-->
+<h2 class="center">List of available books</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Available</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% books.forEach(book => { %>
+            <tr>
+                <td>
+                    <a href="<%= `/books/${book._id}`%>">
+                        <%= book.title%>
+                    </a>
+                </td>
+                <td><%= book.author %></td>
+                <td><%= book.genre %></td>
+                <td><%= book.available ? "Yes" : "No" %></td>
+                <td><%= book.location %></td>
+            </tr>
+        <%}); %>
+    </tbody>
+</table>
