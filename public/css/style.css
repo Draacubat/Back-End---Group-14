@@ -78,6 +78,7 @@ body {
 }
 
 
+
 /*------REGISTER PAGE------*/
 
 .register-title {
@@ -93,7 +94,7 @@ body {
 
 .register-form {
   max-width: 250px;
-  height: 220px;
+  height: 300px;
   margin: 100px auto 0 auto;
   display: flex;
   flex-direction: column;
@@ -104,6 +105,23 @@ body {
   border-radius: 20px;
   box-shadow: 0 2px 3px rgba(0,0,0,0.50);
   
+}
+
+.form-error {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  
+}
+
+.form-success{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Input fields */
@@ -166,6 +184,13 @@ nav a:hover {
 /* Container padding */
 .container {
   padding: 1.5rem; /* Inner spacing for main content area */
+}
+
+.username {
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  padding-left: 3rem;
 }
 
 /*-------FOOTER-------*/

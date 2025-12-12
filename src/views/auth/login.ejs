@@ -1,8 +1,14 @@
 <div class = "login-container">
-    <h1 class="login-title">Login with your username and password</h1>
-    <p class="login-text">You need to be logged in to borrow and return books. Log in by entering your username and password. Don't have an account? <a href="/register">Register here</a>.</p>
+    <h1 class="login-title">Login with your email and password</h1>
+    <p class="login-text">You need to be logged in to borrow and return books. Log in by entering your email and password. Don't have an account? <a href="/register">Register here</a>.</p>
+        <% if (typeof error !== 'undefined') { %>
+            <div class="form-error"><%= error %></div>
+        <% } %>
+        <% if (typeof success !== 'undefined') { %>
+            <div class="form-success"><%= success %></div>
+        <% } %>
     <form action="/login" method="POST" class ="login-form">
-        <input type="text" name="username" placeholder="Username" />
+                <input type="text" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Password" />
         <button type="submit">Login</button>
     </form>
