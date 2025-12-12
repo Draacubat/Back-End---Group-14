@@ -1,6 +1,6 @@
 "use strict";
 
-import { booksSchema } from "../models/books.js";
+import { booksSchema as Books } from "../models/books.js";
 
 //Shows search results (renders to availableBooks.ejs)
 const searchBooks = async (req, res) => {
