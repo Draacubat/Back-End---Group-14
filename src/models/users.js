@@ -22,6 +22,12 @@ const usersSchema = new Schema(
       required: true,
       lowercase: true,
       unique: true
+    },
+
+    role: {
+        type: String,
+        enum: ["user", "staff"],
+        default: "user"
     }
     // password field is added automatically by passport-local-mongoose
     // add borrowed books here
