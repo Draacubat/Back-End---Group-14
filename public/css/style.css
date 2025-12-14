@@ -1,8 +1,15 @@
+
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* Body, basic page settings*/
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   background: #cacaca;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Html & body height*/
@@ -11,16 +18,40 @@ html, body {
   margin: 0;
 }
 
-/* Flexbox layout for body */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 /*Takes up all of the empty space on the site so footer stays at the bottom*/
 .container {
-  flex: 1; 
+  flex: 1;
+  padding: 1rem; 
 }
+
+
+/*------HOME PAGE------*/
+.welcome-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.books-image img{ 
+  max-width: 100%;   
+  max-height: 50vh;  
+  width: auto;       
+  height: auto;       
+  margin: 0 auto;
+  border-radius: 10px;
+  object-fit: cover;
+
+}
+
+
 
 /*------BOOKS PAGE------*/
 
@@ -76,7 +107,6 @@ body {
 .login-form button:hover {
   background: #455a64;
 }
-
 
 
 /*------REGISTER PAGE------*/
@@ -154,49 +184,92 @@ body {
 
 /*Navigation bar, styling*/
 nav {
-  background: #263238;
+  background: #655c52;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 1, 1.1);
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
 /*Navigation bar links*/
 nav ul {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   list-style: none;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
   
 }
 
-/*Navigation bar link styling*/
-nav a {
-  color: white;
-  text-decoration: none; 
-  font-size: 18px; 
-}
-nav a:hover {
-  text-decoration: underline;
-  box-shadow: 0 2px 4px rgba(0, 0, 1, 1.1);
+.nav-left a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer; 
+  align-items: left; 
+  margin-left: 2rem;
 }
 
-/* Container padding */
-.container {
-  padding: 1.5rem; /* Inner spacing for main content area */
+.nav-left a:hover {
+  text-decoration: underline;
+}
+
+
+.nav-right a {
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 0.5rem;
+  /*margin-left: 65rem;*/
+}
+
+.nav-left a.my-books {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.nav-left a.my-books:hover {
+  text-decoration: underline;
+}
+
+
+.nav-right a.logout:hover,
+.nav-right a.login:hover,
+.nav-right a.register:hover {
+  background: #d4c2bc;
+  border-color: #ffffff;
+  color: white;
 }
 
 .username {
   text-align: center;
   font-size: 18px;
   color: #ffffff;
-  padding-left: 3rem;
 }
+
+
+.nav-logo img {
+  height: 60px;
+  width: auto;
+}
+
 
 /*-------FOOTER-------*/
 footer {
-  background: #263238;
-  color: white;
+  background: #655c52;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;

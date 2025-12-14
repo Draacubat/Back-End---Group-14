@@ -1,16 +1,18 @@
 <div class="container">
     <div class="col-sm-6">
-        <img src="">
     </div>
     <div class="col-sm-6">
-        <h1>Welcome to the Library!</h1>
+        <div class="welcome-section">
+            <h1>Welcome to the Library!</h1>
 
-        <% if (!user) { %>
-            <p>Login or register to borrow and return books.</p>
-        <% } %>
-        
+            <% if (!user) { %>
+                <p>Login or register to borrow and return books.</p>
+            <% } %>
+        </div>
+        <div class="image-container">
+            <div class="books-image">
+                <img src="images/books.jpg" alt="books">
+            </div>
+        </div>
     </div>
-</div>
-
-
 
