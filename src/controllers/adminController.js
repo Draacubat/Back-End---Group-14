@@ -6,7 +6,7 @@ export const adminDashboard = async (req, res) => {
     const userCount = await Users.countDocuments();
 
     res.render("admin/dashboard", {
-        currentUser: req.user,
+        user: req.user,
         bookCount,
         userCount
     });
@@ -15,7 +15,7 @@ export const adminDashboard = async (req, res) => {
 export const manageBooks = async (req, res) => {
     const books = await Books.find();
     res.render("admin/books", {
-        currentUser: req.user,
+        user: req.user,
         books
     });
 };
