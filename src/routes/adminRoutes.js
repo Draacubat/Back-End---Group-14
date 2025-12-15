@@ -10,6 +10,8 @@ router.get("/", requireAdmin, adminDashboard);
 // Add a book (admin)
 router.post("/books", requireAdmin, manageBooks);
 
+router.get('/books', requireAdmin, manageBooks);
+
 // Delete book (admin)
 router.post("/books/:id/delete", requireAdmin, async (req, res) => {
     await deleteBook(req, res);
