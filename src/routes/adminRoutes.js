@@ -1,5 +1,6 @@
 import express from "express";
 import { requireAdmin } from "../middleware/requireAdmin.js";
+import { manageBooks, manageUsers, adminPanel } from "../controllers/adminController.js";
 
 const router = express.Router();
 
