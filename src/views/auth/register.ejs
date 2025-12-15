@@ -1,0 +1,17 @@
+<div class="register-container">
+    <h1 class = "register-title">Register a new account</h1>
+        <p class="register-text">Create a new account. Fill in the form below with your first name, last name, password, and email address. Already have an account? <a href="/login">Login here</a>.</p>
+        <% if (typeof error !== 'undefined') { %>
+            <div class="form-error"><%= error %></div>
+        <% } %>
+        <% if (typeof success !== 'undefined') { %>
+            <div class="form-success"><%= success %></div>
+        <% } %>
+    <form action="/register" method="POST" class="register-form"> 
+        <input type="text" name="firstName" placeholder="First name" required />
+        <input type="text" name="lastName" placeholder="Last name" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <button type="submit">Register</button>
+    </form>
+</div>

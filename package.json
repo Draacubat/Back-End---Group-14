@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Draacubat/Back-End---Group-14#readme",
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.11"
   },
   "dependencies": {
     "connect-flash": "^0.1.1",
@@ -36,6 +36,7 @@
     "method-override": "^3.0.0",
     "mongoose": "^8.19.3",
     "passport": "^0.7.0",
-    "passport-local-mongoose": "^9.0.0"
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^9.0.1"
   }
 }
