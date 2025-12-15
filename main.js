@@ -12,6 +12,7 @@ import passport from "passport";
 import { Users } from "./src/models/users.js";
 import indexRoutes from "./src/routes/indexRoutes.js";
 import userRoutes from "./src/routes/userRoutes.js";
+import booksRoutes from "./src/routes/booksRoutes.js";
 
 const app = express();
 
@@ -76,5 +77,6 @@ app.use((req, res, next) => {
 
 app.use("/", indexRoutes);
 app.use("/", userRoutes);
+app.use("/books", booksRoutes);
 
 // server is started after successful DB connection above
