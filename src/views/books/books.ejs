@@ -1,7 +1,7 @@
 <div class="books-container">
-    <h2>Search</h2>
+    
     <form action="/books/search" method="GET" class="search-form"> 
-            <input type="text" placeholder="Search" name="query" />
+            <input type="text" placeholder="Search for books" name="query" />
             <button type="submit">Search</button>
     </form>
 
@@ -14,6 +14,7 @@
                 <th>Genre</th>
                 <th>Available</th>
                 <th>Location</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +34,7 @@
                         <form action="/books/loan/<%= book._id %>" method="POST">
                         <button type="submit">Loan book</button>
                         </form>
-                    <% } else if (!book.available) { %>
+                    <% } else if (user &&!book.available) { %>
                         Loaned
                     <% } %>
                     </td>
