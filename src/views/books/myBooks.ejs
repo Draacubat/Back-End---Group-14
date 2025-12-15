@@ -2,15 +2,18 @@
 <!----Shows the logged in users loaned books, the books can also be returned here------->
 <h1>My Books</h1>
 
-<ul>
+<ul class = "my-books">
   <% if (books.length === 0) { %>
     <li>You have no borrowed books</li>
   <% } else { %>
     <% books.forEach(book => { %>
-      <li>
-        <%= book.title %> (<%= book.author %>)
+      <li class="book-item">
+        <div class="book-info">
+          <span class="title"><%= book.title %></span>
+          <span class="author"> by <%= book.author %></span>
+        </div>
         <form action="/books/return/<%= book._id %>" method="POST" style="display: inline;">
-          <button type="submit">Return Book</button>
+          <button type="submit" class="return-button">Return Book</button>
         </form>
       </li>
     <% }) %>

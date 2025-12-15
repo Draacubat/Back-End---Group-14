@@ -43,7 +43,7 @@ html, body {
 .books-image img{ 
   max-width: 100%;   
   max-height: 50vh;  
-  width: auto;       
+  width: 100%;       
   height: auto;       
   margin: 0 auto;
   border-radius: 10px;
@@ -51,10 +51,130 @@ html, body {
 
 }
 
-
-
 /*------BOOKS PAGE------*/
 
+.search-form {
+  width: 20px;
+  height: auto;
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-form button {
+  padding: 10px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #655c52;
+  border: 2px solid #706660;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #d4c2bc;
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #84786a;
+  color: rgb(0, 0, 0);
+}
+
+.table th,
+.table td {
+  padding: 14px 12px;
+  text-align: left;
+}
+
+
+.table button {
+  padding: 10px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #f5f1ef; 
+  border: 2px solid #706660;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.table button:hover {
+  background-color: #e7dfda;
+}
+
+.table a {
+  color: black;
+}
+
+/*------MY BOOKS PAGE------*/
+
+.my-books {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+.book-info {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  
+}
+
+
+.book-info .title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.book-info .author {
+  font-size: 15px;
+  color: #000000;
+}
+
+.return-button {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #d9d3d1; 
+  border: 2px solid #706660;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.return-button:hover {
+  background-color: #e7dfda;
+}
 
 
 /*------LOGIN PAGE------*/
@@ -230,7 +350,7 @@ nav ul {
   border: 2px solid #ccc;
   border-radius: 15px;
   padding: 0.5rem;
-  /*margin-left: 65rem;*/
+  box-shadow: 0 2px 3px rgba(0,0,0,0.50);
 }
 
 .nav-left a.my-books {
