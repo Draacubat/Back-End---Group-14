@@ -18,10 +18,16 @@
             <% books.forEach(book => { %>
                 <tr>
                     <td><%= book.title %></td>
-                    <td><%= book.author %></td>
+
+                    <!-- ✅ Correct author display -->
+                    <td>
+                        <%= book.name.first %> <%= book.name.last %>
+                    </td>
+
                     <td>
                         <%= book.available ? "Yes" : "No" %>
                     </td>
+
                     <td>
                         <a href="/admin/books/<%= book._id %>/edit"
                            class="btn btn-sm btn-primary">
