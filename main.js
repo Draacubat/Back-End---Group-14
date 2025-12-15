@@ -44,7 +44,7 @@ app.set("port", process.env.PORT || 3000);
 dotenv.config();
 
 // Mongoose connection
-const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/kirjasto";
+const mongoUri = process.env.MONGO_URI || "mongodb://localhost:27017/kirjasto";
 
 mongoose.set("strictQuery", false);
 
