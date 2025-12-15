@@ -1,24 +1,35 @@
 <nav>
-  <ul>
+    
+  </div>
+  <ul class="nav-left">
+    <div class="nav-logo">
+      <img src="https://cdn-icons-png.flaticon.com/128/613/613307.png" alt="logo-icon">
+    </a>
+    </div>
     <li><a href="/">Home</a></li>
     <li><a href="/books">Books</a></li>
+    
 
-    <% if (!user) { %>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/register">Register</a></li>
+    <% if (user) { %>
+      <li><a class="my-books" href="/My Books">My Books</a></li>
     <% } %>
-
+    
     <% if (user && user.role === "admin") { %>
       <li><a href="/admin">Admin Panel</a></li>
     <% } %>
 
-    <% if (user) { %>
-      <a href="/logout">Logout</a>
-      <span class="username"><%= "Welcome " + user.name.first %></span>
+  </ul>
+    <ul class="nav-right">
+    <% if (!user) { %>
+      <li><a class="login" href="/login">Login</a></li>
+      <li><a class="register" href="/register">Register</a></li>
     <% } %>
 
     <% if (user) { %>
-      <a href="/My Books">My Books</a>
+      <li><span class="username"><%= "Welcome " + user.name.first %></span></li>
+      <li><a class="logout" href="/logout">Logout</a></li>
     <% } %>
+
+    
   </ul>
 </nav>

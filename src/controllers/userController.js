@@ -15,7 +15,8 @@ export const postRegister = async (req, res) => {
   try {
     const user = new Users({
       email,
-      name: { first: firstName, last: lastName }
+      name: { first: firstName, last: lastName },
+      role: "user"
     });
 
     await Users.register(user, password);
