@@ -1,7 +1,44 @@
 <div class="books-container">
-    <h1>Books</h1>
+    <h2>Search</h2>
     <form action="/books/search" method="GET" class="search-form"> 
             <input type="text" placeholder="Search" name="query" />
             <button type="submit">Search</button>
     </form>
+
+    <h2>All Books</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Available</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(book => { %>
+                <tr>
+                    <td>
+                        <a href="<%= `/books/${book._id}`%>">
+                            <%= book.title%>
+                        </a>
+                    </td>
+                    <td><%= book.author %></td>
+                    <td><%= book.genre %></td>
+                    <td><%= book.available ? "Yes" : "No" %></td>
+                    <td><%= book.location %></td>
+                    <td>
+                    <% if (user && book.available) { %>
+                        <form action="/books/loan/<%= book._id %>" method="POST">
+                        <button type="submit">Loan book</button>
+                        </form>
+                    <% } else if (!book.available) { %>
+                        Loaned
+                    <% } %>
+                    </td>
+                </tr>
+            <%}); %>
+        </tbody>
+    </table>
 </div>

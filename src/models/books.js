@@ -6,21 +6,15 @@ const { Schema  } = mongoose;
 
 const booksSchema = new Schema(
     {
-        name: {
-            first: {
-                type: String,
-                trim: true,
-                require: true
-            },
-            last: {
-                type: String,
-                trim: true,
-                require: true
-            },
-        },
         title: {
             type: String,
             require: true
+        },
+        author: {
+
+                type: String,
+                trim: true,
+                require: true
         },
         genre: {
             type: String,
@@ -33,6 +27,11 @@ const booksSchema = new Schema(
         },
         available: {
             type: Boolean,
+        },
+        loanedTo: {
+            type: Schema.Types.ObjectId,
+            ref: "Users",
+            default: null
         }
     }
 );
