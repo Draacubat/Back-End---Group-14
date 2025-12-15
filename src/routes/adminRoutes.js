@@ -1,22 +1,18 @@
 import express from "express";
 import { requireAdmin } from "../middleware/requireAdmin.js";
-import { manageBooks, manageUsers, adminPanel } from "../controllers/adminController.js";
+import { manageBooks, manageUsers, adminDashboard } from "../controllers/adminController.js";
 
 const router = express.Router();
 
 // Admin dashboard
-router.get("/", requireAdmin, (req, res) => {
-  res.render("admin/dashboard");
-});
+router.get("/", requireAdmin, adminDashboard);
 
 // Add a book (admin)
-router.post("/books", requireAdmin, async (req, res) => {
-  // your book creation logic
-});
+router.post("/books", requireAdmin, manageBooks);
 
 // Delete book (admin)
 router.post("/books/:id/delete", requireAdmin, async (req, res) => {
-  // delete logic
+    await deleteBook(req, res);
 });
 
 export default router;
