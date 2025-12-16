@@ -28,14 +28,13 @@ export const manageUsers = async (req, res) => {
   });
 };
 
-// 👉 SHOW ADD BOOK FORM
+
 export const showNewBookForm = (req, res) => {
   res.render("admin/newBook", {
     user: req.user
   });
 };
 
-// 👉 CREATE BOOK
 export const createBook = async (req, res) => {
     const {
         title,
@@ -60,7 +59,7 @@ export const createBook = async (req, res) => {
     res.redirect("/admin/books");
 };
 
-// 👉 DELETE BOOK
+
 export const deleteBook = async (req, res) => {
   await Books.findByIdAndDelete(req.params.id);
   res.redirect("/admin/books");
