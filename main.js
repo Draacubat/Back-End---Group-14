@@ -76,6 +76,6 @@ app.use((req, res, next) => {
 
 app.use("/", indexRoutes);
 app.use("/", userRoutes);
-app.use("/admin", adminRoutes); // <-- added
+app.use("/admin", adminRoutes);
 
 // server is started after successful DB connection above
