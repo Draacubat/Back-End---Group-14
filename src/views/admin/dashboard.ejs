@@ -1,0 +1,20 @@
+
+<div class="container">
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, <%= user.name.first %>!</p>
+
+    <div class="stats">
+        <div class="card">
+            <h3>Total Books</h3>
+            <p><%= bookCount %></p>
+        </div>
+
+        <div class="card">
+            <h3>Total Users</h3>
+            <p><%= userCount %></p>
+        </div>
+    </div>
+
+    <a href="/admin/books" class="btn btn-primary">Manage Books</a>
+    <a href="/admin/users" class="btn btn-secondary">Manage Users</a>
+</div>

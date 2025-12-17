@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Add New Book</h1>
+
+  <form action="/admin/books/new" method="POST">
+
+    <label>Title</label>
+    <input type="text" name="title" required>
+
+    <label>Author first name</label>
+    <input type="text" name="authorFirst" required>
+
+    <label>Author last name</label>
+    <input type="text" name="authorLast" required>
+
+    <label>Genre</label>
+    <input type="text" name="genre" required>
+
+    <label>Location</label>
+    <input type="text" name="location">
+
+    <label>
+      <input type="checkbox" name="available" checked>
+      Available
+    </label>
+
+    <button type="submit" class="btn btn-success">
+      Add Book
+    </button>
+
+    <a href="/admin/books" class="btn btn-secondary">
+      Cancel
+    </a>
+
+  </form>
+</div>
+
