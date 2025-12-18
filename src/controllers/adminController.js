@@ -38,8 +38,7 @@ export const showNewBookForm = (req, res) => {
 export const createBook = async (req, res) => {
     const {
         title,
-        authorFirst,
-        authorLast,
+        author,
         genre,
         location,
         available
@@ -50,10 +49,7 @@ export const createBook = async (req, res) => {
         genre,
         location,
         available: available === "on",
-        name: {
-            first: authorFirst,
-            last: authorLast
-        }
+        author
     });
 
     res.redirect("/admin/books");

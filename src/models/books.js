@@ -8,13 +8,11 @@ const booksSchema = new Schema(
     {
         title: {
             type: String,
-            require: true
+            required: true
         },
         author: {
-
-                type: String,
-                trim: true,
-                require: true
+            type: String,
+            required: true
         },
         genre: {
             type: String,
