@@ -1,0 +1,16 @@
+FROM node:24.8.0-alpine
+
+WORKDIR /usr/src/app
+
+# Copy dependencies and install
+COPY package*.json ./
+RUN npm ci
+
+# Copy source code
+COPY . .
+
+# Use non-root user
+USER node
+
+# Run tests
+CMD ["npm", "test"]

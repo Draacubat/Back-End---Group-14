@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon main.js",
     "start": "node main.js",
-    "test": "npm start"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
@@ -16,12 +16,19 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "jest": {
+  "testEnvironment": "node",
+  "extensionsToTreatAsEsm": [".js"]
+},
+
   "bugs": {
     "url": "https://github.com/Draacubat/Back-End---Group-14/issues"
   },
   "homepage": "https://github.com/Draacubat/Back-End---Group-14#readme",
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.1.4"
   },
   "dependencies": {
     "connect-flash": "^0.1.1",
